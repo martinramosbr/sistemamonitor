@@ -4,6 +4,7 @@ require_once("vendor/autoload.php");
 
 use \Slim\Slim;
 use \Martinbr\Page;
+use \Martinbr\PageSistema;
 
 $app = new \Slim\Slim();
 
@@ -23,6 +24,15 @@ $app->get('/', function() {
 	$page->setTpl("index");
 
 });
+
+$app->get('/sistema', function() {
+
+	$page = new PageSistema();
+
+	$page->setTpl("index");
+
+
+}); 
 
 $app->run();
 
