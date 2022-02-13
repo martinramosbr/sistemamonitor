@@ -68,6 +68,15 @@ class User extends Model {
 
 	}
 
+	public static function listAll()
+	{
+
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM usuario ORDER BY idusuario");
+
+	}
+
 }
 
  ?>

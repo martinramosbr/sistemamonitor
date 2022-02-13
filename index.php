@@ -65,6 +65,37 @@ $app->get('/sistema/logout', function() {
 
 });
 
+$app->get("/sistema/formulario-cadastro-usuario", function() {
+
+	User::verifyLogin();
+
+	$users = User::listAll();
+
+	$page = new PageSistema();
+
+	$page->setTpl("formulario-cadastro-usuario", array(
+		
+		"formulario-cadastro-usuario"=>$users
+	));
+
+});
+
+$app->get("/sistema/novo/usuario", function() {
+
+	User::verifyLogin();
+
+	$page = new PageSistema();
+
+	$page->setTpl("novo-cadastro-usuario");
+
+});
+
+$app->post("/sistema/novo/usuario", function() {
+
+	User::verifyLogin();
+
+});
+
 $app->run();
 
  ?>
