@@ -25,7 +25,7 @@
     <div>
   <form action="/" method="post">
     <div id="login">
-    	<img src="res/loginimg/logo login.png">
+    	<img src="res/login/img/logo login.png">
        <br><br>
       	<h1>Sistema de Monitoramento</h1>
       	<h2>Contratos Carletto</h2>
