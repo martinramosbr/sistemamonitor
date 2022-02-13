@@ -8,7 +8,11 @@ $app->config('debug', true);
 
 $app->get('/', function() {
     
-	echo "OK";
+	$sql = new Martinbr\DB\Sql();
+
+	$results = $sql->select("SELECT * FROM usuario");
+
+	echo json_encode($results);
 
 });
 
