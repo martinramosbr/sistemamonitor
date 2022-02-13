@@ -5,6 +5,7 @@
         
           <ul>
             <li class="inicio"><a href="https://www.grupocarletto.com.br/">Inicio</a></li>
+            <li class="inicio"><a href="http://www.sistemamonitorcarletto.com.br/sistema/login">Login</a></li>
             <li class="sobre"><a href="https://www.grupocarletto.com.br/?page_id=327">Sobre</a></li>
             <li class="sobre"><a href="https://www.grupocarletto.com.br/?page_id=455">Credenciadas</a></li>
             <li class="sobre"><a href="https://www.grupocarletto.com.br/?page_id=450">Blog</a></li>
@@ -24,7 +25,7 @@
   <section>
     <div>
   <form action="/" method="post">
-    <div id="login">
+   <!-- <div id="login">
     	<img src="res/login/img/logo login.png">
        <br><br>
       	<h1>Sistema de Monitoramento</h1>
@@ -36,9 +37,12 @@
       	<button>Entrar</button>
       	<br>
       	<a href="#">Esqueceu a senha?</a>
-        <h3 id="ass">Por Martinho Ramos</h3>
+        <h3 id="ass">Por Martinho Ramos</h3> 
+        <button>Entrar</button>
     </div>
+    -->
   </form>
+
 </div>
 </section>
   <script>

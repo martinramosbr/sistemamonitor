@@ -57,7 +57,7 @@
         <div class="profile_name">$Usuario</div>
         <div class="job">Carletto Sitemas</div>
       </div>
-      <i class='bx bx-log-out' ></i>
+      <a class="bx bx-log-out" style="color: #fff; height: 50px; min-width: 78px; text-align: center; line-height: 50px; font-size: 20px; cursor: pointer; transition: all 0.3s ease;" href="sistema/logout">Sair</a>
     </div>
   </li>
 </ul>
