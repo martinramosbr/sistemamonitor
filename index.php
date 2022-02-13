@@ -2,17 +2,25 @@
 
 require_once("vendor/autoload.php");
 
+use \Slim\Slim;
+use \Martinbr\Page;
+
 $app = new \Slim\Slim();
 
 $app->config('debug', true);
 
 $app->get('/', function() {
     
-	$sql = new Martinbr\DB\Sql();
+	//teste coneção banco de dados*
+	//$sql = new Martinbr\DB\Sql();
 
-	$results = $sql->select("SELECT * FROM usuario");
+	//$results = $sql->select("SELECT * FROM usuario");
 
-	echo json_encode($results);
+	//echo json_encode($results); fim --
+
+	$page = new Page();
+
+	$page->setTpl("index");
 
 });
 
