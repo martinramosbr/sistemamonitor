@@ -7,7 +7,7 @@
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="/res/sistema/image/carlettoicon.png"  href="carlettoicon.png">
+    <link rel="icon" type="carlettoicon.png"  href="/res/sistema/carlettoicon.png">
     <link rel="stylesheet" href="/res/sistema/lib/css/bootstrap.min.css">
    </head>
 <body>

@@ -1,4 +1,4 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><div class="sidebar close">
+<?php if(!class_exists('Rain\Tpl')){exit;}?>  <div class="sidebar close">
     <div class="logo-details">
       <img src="/res/sistema/img/icone-logo-menu.png">
       <span class="logo_name"><img src="/res/sistema/img/1logo-login.png"></span>
@@ -16,7 +16,7 @@
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Cadastro</a></li>
           <li><a href="formulario-cadastro-orgao.html">Orgão</a></li>
-          <li><a href="/sistema/users">Usuarios</a></li>
+          <li><a href="/sistema/formulario-cadastro-usuario">Usuarios</a></li>
           <li><a href="formulario-cadastro-consultas.html">Consultas</a></li>
         </ul>
       </li>
@@ -57,7 +57,7 @@
         <div class="profile_name">$Usuario</div>
         <div class="job">Carletto Sitemas</div>
       </div>
-      <a class="bx bx-log-out" style="color: #fff; height: 50px; min-width: 78px; text-align: center; line-height: 50px; font-size: 20px; cursor: pointer; transition: all 0.3s ease;" href="sistema/logout">Sair</a>
+      <a class="bx bx-log-out" style="color: #fff; height: 50px; min-width: 78px; text-align: center; line-height: 50px; font-size: 20px; cursor: pointer; transition: all 0.3s ease;" href="logout">Sair</a>
     </div>
   </li>
 </ul>
@@ -77,12 +77,44 @@
       </div>
 
       <!-- Inicio do formulario -->
-     
+      
+      <div class="titulo-tabela">
+      <p id="titulo-cadastro-usuario">Usuários Cadastrados</p>
+          <button id="novo-cadastro-usuario" onclick="window.location.href='novo-cadastro-usuario.html';">Novo</button>
+          <button id="filtro-cadastro-usuario" onclick="window.location.href='filtro-cadastro-usuario.html';">Filtro</button>
+          <br><br>
+      </div>
+      <div id="tabelas-1">
+        <table class="table table-light">
+          <thead>
+            <tr>
+              <th scope="col">Identificador</th>
+              <th scope="col">Nome</th>
+            </tr>
+          </thead>
+          <tbody>
+          <?php $counter1=-1;  if( isset($users) && ( is_array($users) || $users instanceof Traversable ) && sizeof($users) ) foreach( $users as $key1 => $value1 ){ $counter1++; ?>
+            <tr>
+              <td><?php echo htmlspecialchars( $value1["idusuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+              <td><?php echo htmlspecialchars( $value1["des_usuario"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+            </tr>
+            <?php } ?>
+          </tbody>
 
+        </table>
+        <button class="botao-voltar" onclick="history.go(-1)">Voltar</button>
+      </div>
+        
+    
+   
 
       <!-- Fim do formulario -->
+
   </section>
   <!-- End Main -->
+  
+    
+  
   <script>
   let arrow = document.querySelectorAll(".arrow");
   for (var i = 0; i < arrow.length; i++) {
@@ -97,3 +129,4 @@
   sidebarBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("close");
   });
+  

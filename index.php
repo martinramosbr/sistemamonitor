@@ -65,7 +65,7 @@ $app->get('/sistema/logout', function() {
 
 });
 
-$app->get("/sistema/formulario-cadastro-usuario", function() {
+$app->get("/sistema/users", function() {
 
 	User::verifyLogin();
 
@@ -73,9 +73,9 @@ $app->get("/sistema/formulario-cadastro-usuario", function() {
 
 	$page = new PageSistema();
 
-	$page->setTpl("formulario-cadastro-usuario", array(
+	$page->setTpl("users", array(
 		
-		"formulario-cadastro-usuario"=>$users
+		"users"=>$users
 	));
 
 });
