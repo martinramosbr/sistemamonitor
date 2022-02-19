@@ -1,36 +1,7 @@
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <!-- Boxiocns CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/carlettoicon.png"  href="carlettoicon.png">
-    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
-   </head>
-<body>
-  <header>
-    <div class="header-nocolor">
-      <div class="container">
-        
-          <ul>
-            <li class="inicio"><a href="https://www.grupocarletto.com.br/">Inicio</a></li>
-            <li class="sobre"><a href="https://www.grupocarletto.com.br/?page_id=327">Sobre</a></li>
-            <li class="sobre"><a href="https://www.grupocarletto.com.br/?page_id=455">Credenciadas</a></li>
-            <li class="sobre"><a href="https://www.grupocarletto.com.br/?page_id=450">Blog</a></li>
-            <li class="sobre"><a href="https://www.grupocarletto.com.br/">Contato</a></li>
-            <li class="sobre"><a href="https://www.grupocarletto.com.br/?page_id=339">Area do Cliente</a></li>
-          </ul>
-      </div>
-    </div>  
-  </header>
-
   <div class="sidebar close">
     <div class="logo-details">
-      <img src="img/icone-logo-menu.png">
-      <span class="logo_name"><img src="img/1logo-login.png"></span>
+      <img src="/res/sistema/img/icone-logo-menu.png">
+      <span class="logo_name"><img src="/res/sistema/img/1logo-login.png"></span>
     </div>
     <ul class="nav-links">
       </li>
@@ -86,7 +57,7 @@
         <div class="profile_name">$Usuario</div>
         <div class="job">Carletto Sitemas</div>
       </div>
-      <i class='bx bx-log-out' ></i>
+      <a class="bx bx-log-out" style="color: #fff; height: 50px; min-width: 78px; text-align: center; line-height: 50px; font-size: 20px; cursor: pointer; transition: all 0.3s ease;" href="logout">Sair</a>
     </div>
   </li>
 </ul>
@@ -106,54 +77,26 @@
       </div>
 
       <!-- Inicio do formulario -->
-      <!--<div class="campo-cadastro">
-      <p id="titulo-cadastro-orgao">Ogãos Cadastrados</p>
       
-        <form action="/" method="post" class="formulario-cadastro">
-          <button id="novo" href="novo-cadastro-orgao.html">Novo</button>
-          <button id="filtro">Filtro</button>
+      <div class="campo-cadastro">
+      <p id="titulo-cadastro-orgao">Cadastro de Usuário</p>
+      
+        <form action="/sistema/novo-usuario" method="post" class="formulario-cadastro">
           <br><br>
-          <td id="th1">Orgão</td>
-          <input class="nome-orgao-input" type="text" name="nome-orgao">
+          <td id="th1">Nome</td>
+          <input class="nome-orgao-input" type="text" name="des_usuario">
           <br><br>
-          <th id="th2">Data Vencimento</th>
-          <input class="data-vencimento-input" type="date" name="data-vencimento">
-          <br><br>
-          <th id="th3">Valor Contrato</th>
-          <input class="valor-contrato-input" type="number">
+          <th id="th3">Senha</th>
+          <input class="senha-usuario-cadastro" type="password" name="des_senha">
           <br><br><br>
-          <button class="botao-gravar-formulario">Voltar</button>
+          <input class="botao-gravar-formulario" type="submit"></input>
+          <input class="botao-voltar-formulario" type="button" value="Voltar" onclick="history.go(-1)"></input>
         </form>
-    
-      </div> -->
-      <div class="titulo-tabela">
-      <p id="titulo-cadastro-usuario">Órgão Cadastrados</p>
-          <button id="novo-cadastro-usuario" onclick="window.location.href='novo-cadastro-orgao.html';">Novo</button>
-          <button id="filtro-cadastro-usuario" onclick="window.location.href='filtro-cadastro-orgao.html';">Filtro</button>
-          <br><br>
+
       </div>
-      <div id="tabelas-1">
-        <table class="table table-light">
-          <thead>
-            <tr>
-              <th scope="col">Identificador</th>
-              <th scope="col">Contrato</th>
-              <th scope="col">Data de Vencimento</th>
-              <th scope="col">Valor do Contrato</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>$des_id</td>
-              <td>$des_contrato</td>
-              <td>$des_data_vencimento</td>
-              <td>$des_valor_contrato</td>
-            </tr>
-          </tbody>
-        </table>
-        <button class="botao-voltar" onclick="history.go(-1)">Voltar</button>
-      </div>
+
       <!-- Fim do formulario -->
+
   </section>
   <!-- End Main -->
   
@@ -173,8 +116,4 @@
   sidebarBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("close");
   });
-  </script>
-  <script src="lib/js/bootstrap.min.js"></script>
-  <script src="lib/js/bootstrap.min.js"></script>
-</body>
-</html>
+

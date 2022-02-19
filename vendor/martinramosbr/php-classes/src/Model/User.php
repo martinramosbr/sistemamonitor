@@ -77,6 +77,22 @@ class User extends Model {
 
 	}
 
+	public function save()
+	{
+
+		$sql = new Sql();
+		/*
+		pdes_usuario VARCHAR(100),
+		pdes_senha VARCHAR(256)
+		*/
+		$results = $sql->select("CALL sp_users_save(:des_usuario, :des_senha)", array(
+			":des_usuario"=>$this->getdes_usuario(),
+			":des_senha"=>$this->getdes_senha()
+		));
+
+		$this->setData($results[0]);
+	}
+
 }
 
  ?>

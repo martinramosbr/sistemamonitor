@@ -80,19 +80,31 @@ $app->get("/sistema/users", function() {
 
 });
 
-$app->get("/sistema/novo/usuario", function() {
+$app->get("/sistema/novo-usuario", function() {
 
 	User::verifyLogin();
 
 	$page = new PageSistema();
 
-	$page->setTpl("novo-cadastro-usuario");
+	$page->setTpl("new-users");
 
 });
 
-$app->post("/sistema/novo/usuario", function() {
+$app->post("/sistema/novo-usuario", function() {
 
 	User::verifyLogin();
+
+	//var_dump($_POST);
+	$user = new User();
+
+	$user->setData($_POST);
+
+	$user->save();
+
+	header("Location: /sistema/users");
+	exit;
+
+	//var_dump($user);
 
 });
 

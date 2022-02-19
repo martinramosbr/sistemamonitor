@@ -80,8 +80,8 @@
       
       <div class="titulo-tabela">
       <p id="titulo-cadastro-usuario">Usuários Cadastrados</p>
-          <button id="novo-cadastro-usuario" onclick="window.location.href='novo-cadastro-usuario.html';">Novo</button>
-          <button id="filtro-cadastro-usuario" onclick="window.location.href='filtro-cadastro-usuario.html';">Filtro</button>
+          <button id="novo-cadastro-usuario" onclick="window.location.href='novo-usuario';">Novo</button>
+          <button id="filtro-cadastro-usuario" onclick="window.location.href='/sistema/';">Filtro</button>
           <br><br>
       </div>
       <div id="tabelas-1">
