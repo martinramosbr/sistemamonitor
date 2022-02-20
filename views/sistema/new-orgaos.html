@@ -1,24 +1,24 @@
-      <!-- Inicio do formulario -->
-      
+ <!-- Inicio do formulario -->
       <div class="campo-cadastro">
-      <p id="titulo-cadastro-orgao">Cadastro de Usuário</p>
+      <p id="titulo-cadastro-orgao">Cadastro do Orgão</p>
       
-        <form action="/sistema/novo-usuario" method="post" class="formulario-cadastro">
+        <form action="/" method="post" class="formulario-cadastro">
           <br><br>
-          <td id="th1">Nome</td>
-          <input class="nome-orgao-input" type="text" name="des_usuario">
+          <td id="th1">Orgão</td>
+          <input class="nome-orgao-input" type="text" name="nome-orgao">
           <br><br>
-          <th id="th3">Senha</th>
-          <input class="senha-usuario-cadastro" type="password" name="des_senha">
+          <th id="th2">Data Vencimento</th>
+          <input class="data-vencimento-input" type="date" name="data-vencimento">
+          <br><br>
+          <th id="th3">Valor Contrato</th>
+          <input class="valor-contrato-input" type="number">
           <br><br><br>
           <input class="botao-gravar-formulario" type="submit"></input>
           <input class="botao-voltar-formulario" type="button" value="Voltar" onclick="history.go(-1)"></input>
         </form>
-
+    
       </div>
-
       <!-- Fim do formulario -->
-
   </section>
   <!-- End Main -->
   
@@ -38,4 +38,4 @@
   sidebarBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("close");
   });
-
+  

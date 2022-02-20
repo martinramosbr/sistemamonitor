@@ -1,4 +1,4 @@
-      <!-- Inicio do formulario -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?>      <!-- Inicio do formulario -->
       <!--<div class="campo-cadastro">
       <p id="titulo-cadastro-orgao">Ogãos Cadastrados</p>
       
@@ -36,14 +36,14 @@
             </tr>
           </thead>
           <tbody>
-            {loop="$orgao"}
+            <?php $counter1=-1;  if( isset($orgao) && ( is_array($orgao) || $orgao instanceof Traversable ) && sizeof($orgao) ) foreach( $orgao as $key1 => $value1 ){ $counter1++; ?>
             <tr>
-              <td>{$value.idcontratos}</td>
-              <td>{$value.des_contrato}</td>
-              <td>{$value.des_datavencimento}</td>
-              <td>{$value.des_valorcontrato}</td>
+              <td><?php echo htmlspecialchars( $value1["idcontratos"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+              <td><?php echo htmlspecialchars( $value1["des_contrato"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+              <td><?php echo htmlspecialchars( $value1["des_datavencimento"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+              <td><?php echo htmlspecialchars( $value1["des_valorcontrato"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
             </tr>
-            {/loop}
+            <?php } ?>
           </tbody>
         </table>
         <button class="botao-voltar" onclick="history.go(-1)">Voltar</button>

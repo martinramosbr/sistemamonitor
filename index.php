@@ -108,6 +108,59 @@ $app->post("/sistema/novo-usuario", function() {
 
 });
 
+$app->get("/sistema/orgaos", function() {
+
+	User::verifyLogin();
+
+	$orgao = User::listAllorgaos();
+
+	$page = new PageSistema();
+
+	$page->setTpl("orgao", array(
+
+		"orgao"=>$orgao
+
+	));
+
+	/*	$users = User::listAll();
+
+		$page = new PageSistema();
+
+		$page->setTpl("users", array(
+		
+			"users"=>$users
+		));*/
+
+});
+
+$app->get("/sistema/novo-orgao", function() {
+
+	User::verifyLogin();
+
+	$page = new PageSistema();
+
+	$page->setTpl("new-orgaos");
+
+});
+
+$app->post("/sistema/novo-orgao", function() {
+
+	User::verifyLogin();
+
+	//var_dump($_POST);
+	$orgao = new User();
+
+	$orgao->setData($_POST);
+
+	$orgao->save();
+
+	header("Location: /sistema/orgaos");
+	exit;
+
+	//var_dump($user);
+
+});
+
 $app->run();
 
  ?>

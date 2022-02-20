@@ -93,6 +93,33 @@ class User extends Model {
 		$this->setData($results[0]);
 	}
 
+	public static function listAllorgaos()
+	{
+
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM contratos ORDER BY idcontratos");
+
+	}
+
+		public function saveOrgao()
+	{
+
+		$sql = new Sql();
+		/*
+		pdes_contrato VARCHAR(100),
+		pdes_datavencimento date,
+		pdes_valorcontrato decimal(30,2)
+		*/
+		$results = $sql->select("CALL sp_orgao_save(:des_contrato, :des_datavencimento, :des_valorcontrato)", array(
+			":des_contrato"=>$this->getdes_contrato(),
+			":des_datavencimento"=>$this->getdes_datavencimento(),
+			":des_valorcontrato"=>$this->getdes_valorcontrato()
+		));
+
+		$this->setData($results[0]);
+	}
+
 }
 
  ?>
