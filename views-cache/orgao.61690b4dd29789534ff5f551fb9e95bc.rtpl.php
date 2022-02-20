@@ -59,6 +59,7 @@
               <th scope="col">Contrato</th>
               <th scope="col">Data de Vencimento</th>
               <th scope="col">Valor do Contrato</th>
+              <th scope="col">Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -68,6 +69,7 @@
               <td><?php echo htmlspecialchars( $value1["des_contrato"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
               <td><?php echo htmlspecialchars( $value1["des_datavencimento"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
               <td><?php echo htmlspecialchars( $value1["des_valorcontrato"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+              <td><a href="#" style="font-size: 8px; margin-left: 2px;" class="btn btn-primary btn-xs">Editar</a><a href="#" style="font-size: 8px; margin-left: 2px;" class="btn btn-danger btn-xs">Delete</a></td>
             </tr>
             <?php } ?>
           </tbody>

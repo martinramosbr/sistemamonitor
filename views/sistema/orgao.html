@@ -59,6 +59,7 @@
               <th scope="col">Contrato</th>
               <th scope="col">Data de Vencimento</th>
               <th scope="col">Valor do Contrato</th>
+              <th scope="col">Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -68,6 +69,7 @@
               <td>{$value.des_contrato}</td>
               <td>{$value.des_datavencimento}</td>
               <td>{$value.des_valorcontrato}</td>
+              <td><a href="#" style="font-size: 8px; margin-left: 2px;" class="btn btn-primary btn-xs">Editar</a><a href="#" style="font-size: 8px; margin-left: 2px;" class="btn btn-danger btn-xs">Delete</a></td>
             </tr>
             {/loop}
           </tbody>
