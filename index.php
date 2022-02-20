@@ -152,7 +152,7 @@ $app->post("/sistema/novo-orgao", function() {
 
 	$orgao->setData($_POST);
 
-	$orgao->save();
+	$orgao->saveOrgao();
 
 	header("Location: /sistema/orgaos");
 	exit;

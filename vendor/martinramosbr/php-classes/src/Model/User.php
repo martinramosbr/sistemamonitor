@@ -117,7 +117,7 @@ class User extends Model {
 			":des_valorcontrato"=>$this->getdes_valorcontrato()
 		));
 
-		$this->setData($results[0]);
+		$this->setData($results);
 	}
 
 }
