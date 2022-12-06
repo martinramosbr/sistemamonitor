@@ -1,4 +1,6 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?>      <!-- Inicio do formulario -->
+<?php if(!class_exists('Rain\Tpl')){exit;}?>
+
+      <!-- Inicio do formulario -->
       
       <div class="campo-cadastro">
       <p id="titulo-cadastro-orgao">Cadastro de Usuário</p>

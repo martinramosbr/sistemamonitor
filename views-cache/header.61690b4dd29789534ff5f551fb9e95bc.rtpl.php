@@ -37,18 +37,18 @@
         <div class="iocn-link">
           <a href="#">
             <i class='bx bx-collection' ></i>
-            <span class="link_name">Cadastro</span>
+            <span class="link_name">Solicitações</span>
           </a>
           <i class='bx bxs-chevron-down arrow' ></i>
         </div>
         <ul class="sub-menu">
-          <li><a class="link_name" href="#">Cadastro</a></li>
-          <li><a href="/sistema/orgaos">Orgão</a></li>
-          <li><a href="/sistema/users">Usuarios</a></li>
+          <li><a class="link_name" href="#">Solicitações</a></li>
+          <li><a href="/sistema/in-queue">Na fila</a></li>
+          <li><a href="/sistema/resolved">Atendidas</a></li>
           <!--<li><a href="formulario-cadastro-consultas.html">Consultas</a></li>-->
         </ul>
       </li>
-      <li>
+      <!--<li>
         <div class="iocn-link">
         <a href="#">
           <i class='bx bx-pie-chart-alt-2' ></i>
@@ -61,8 +61,8 @@
           <li><a href="tabela-saldos.html">Saldos</a></li>
           <li><a href="tabela-extratos.html">Extrato</a></li>
         </ul>
-      </li>
-      <li>
+      </li>-->
+      <!--<li>
         <div class="iocn-link">
         <a href="#">
           <i class='bx bx-line-chart' ></i>
@@ -76,4 +76,48 @@
           <li><a href="monitor-vencidos.html">Vencidos</a></li>
           <li><a href="todos-vencimentos.html">Todos</a></li>
         </ul>
+      </li>-->
+      <li>
+        <div class="iocn-link">
+        <a href="#">
+          <i class='bx bx-cog' ></i>
+          <span class="link_name">Suporte</span>
+        </a>
+         <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Suporte</a>
+          </li>
+          <li><a href="/sistema/users">Usuario</a></li>
+          <li><a href="/sistema/alterar-users">Alterar Senha</a></li>
+        </ul>
       </li>
+  <li>
+    <div class="profile-details">
+      <div class="profile-content">
+      </div>
+      <div class="name-job">
+        <div class="profile_name">value</div>
+        <div class="job">Carletto Sitemas</div>
+      </div>
+      <a class="bx bx-log-out" style="color: #fff; height: 50px; min-width: 78px; text-align: center; line-height: 50px; font-size: 20px; cursor: pointer; transition: all 0.3s ease;" href="logout">Sair</a>
+    </div>
+  </li>
+</ul>
+  </div>
+  <!--Start Main -->
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu' ></i>
+      <span class="text">Sistema de solicitaçãoes e monitoramento<h1>Registro suporte:</h1></span>
+      <h3 id="ass"> _By M. Correia</h3>
+    </div>
+    <div class="dataehora">
+      <script language=javascript type="text/javascript">
+      now = new Date
+      document.write (now.getHours() + ":" + now.getUTCMinutes() + ", " + now.getDate() + "/" + now.getMonth() + "/" + now.getFullYear() )
+      </script>
+      </div>
+
+
+        

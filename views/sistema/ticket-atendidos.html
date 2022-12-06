@@ -1,0 +1,59 @@
+<!-- resolved-->
+<!-- Inicio do formulario -->
+      
+      <div class="titulo-tabela">
+      <p id="titulo-cadastro-usuario">Usuários Cadastrados</p>
+          <button id="novo-cadastro-usuario" onclick="window.location.href='/sistema';">Novo</button>
+          <button id="filtro-cadastro-usuario" onclick="window.location.href='/sistema/filtrar-tickets-atendido';">Filtro</button>
+          <br><br>
+      </div>
+      <div id="tabelas-1">
+        <table class="table table-light">
+          <thead>
+            <tr>
+              <th scope="col">Nº Ticket</th>
+              <th scope="col">Titulo</th>
+              <th scope="col">Responsável</th>
+              <th scope="col">Status</th>              
+            </tr>
+          </thead>
+          <tbody>
+          {loop="$ticketatt"}
+            <tr>
+              <td>{$value.idusuario}</td>
+              <td>{$value.des_usuario}</td>
+              <td><a href="/sistema/users/{$value.idusuario}" style="font-size: 8px; margin-left: 2px;" class="btn btn-primary btn-xs">Editar</a><a href="/sistema/users/{$value.idusuario}/delete" style="font-size: 8px; margin-left: 2px;" class="btn btn-danger btn-xs">Delete</a></td>
+              
+            </tr>
+            {/loop}
+          </tbody>
+
+        </table>
+        <button class="botao-voltar" onclick="history.go(-1)">Voltar</button>
+      </div>
+        
+    
+   
+
+      <!-- Fim do formulario -->
+
+  </section>
+  <!-- End Main -->
+  
+    
+  
+  <script>
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  

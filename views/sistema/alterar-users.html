@@ -1,0 +1,59 @@
+
+<!-- Inicio do formulario -->
+      
+      <div class="titulo-tabela">
+      <p id="titulo-cadastro-usuario">Usuários Cadastrados</p>
+          <button id="novo-cadastro-usuario" onclick="window.location.href='novo-usuario';">Novo</button>
+          <button id="filtro-cadastro-usuario" onclick="window.location.href='/sistema/filtro-users';">Filtro</button>
+          <br><br>
+      </div>
+      <div id="tabelas-1">
+        <table class="table table-light">
+          <thead>
+              <tr>
+              <th scope="col">Identificador</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Ações</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+          {loop="$alterarusers"}
+            <tr>
+              <td>{$value.idusuario}</td>
+              <td>{$value.des_usuario}</td>
+              <td><a href="/sistema/users/{$value.idusuario}" style="font-size: 8px; margin-left: 2px;" class="btn btn-primary btn-xs">Editar</a><a href="/sistema/users/{$value.idusuario}/delete" style="font-size: 8px; margin-left: 2px;" class="btn btn-danger btn-xs">Delete</a></td>
+            </tr>
+            <h1>{$value.des_usuario}</h1>
+            {/loop}
+          </tbody>
+
+        </table>
+        <button class="botao-voltar" onclick="history.go(-1)">Voltar</button>
+      </div>
+        
+    
+   
+
+      <!-- Fim do formulario -->
+
+  </section>
+  <!-- End Main -->
+  
+    
+  
+  <script>
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });
+  

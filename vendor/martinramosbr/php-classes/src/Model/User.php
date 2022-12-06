@@ -93,6 +93,24 @@ class User extends Model {
 		$this->setData($results[0]);
 	}
 
+	public static function listAllqueue()
+	{
+
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM contratos ORDER BY idcontratos");
+
+	}
+
+		public static function listAllticketatt()
+	{
+
+		$sql = new Sql();
+
+		return $sql->select("SELECT * FROM contratos ORDER BY idcontratos");
+
+	}
+
 	public static function listAllorgaos()
 	{
 
@@ -102,7 +120,7 @@ class User extends Model {
 
 	}
 
-		public function saveOrgao()
+	public function saveOrgao()
 	{
 
 		$sql = new Sql();
@@ -120,6 +138,58 @@ class User extends Model {
 		$this->setData($results);
 	}
 
-}
+	public function saveTicket()
+	{
 
- ?>
+		$sql = new Sql();
+
+		$results = $sql->select("CALL sp_ticket_save(:des_nome, :des_email, :des_titulo, :des_departamento, :des_tipo, :des_prioridade, :des_mensagem)", array(
+			":des_nome"=>$this->getdes_nome(),
+			":des_email"=>$this->getdes_email(),
+			":des_titulo"=>$this->getdes_titulo(),
+			":des_departamento"=>$this->getdes_departamento(),
+			":des_tipo"=>$this->getdes_tipo(),
+			":des_prioridade"=>$this->getdes_prioridade(),
+			":des_mensagem"=>$this->getdes_mensagem()
+			));
+
+		$this->setData($results);
+	}
+
+	//Faz o select do usuario e tras as informações na tela de update
+	public function get($idusuario) 
+	{
+
+		$sql = new Sql();
+
+		$results = $sql->select("SELECT * FROM usuario WHERE idusuario = :idusuario", array(
+			":idusuario"=>$idusuario
+
+		));
+		//retorna com os dados na primeira posição do campo de formulario
+		$this->setData($results[0]);
+
+	}
+
+	public function update()
+	{
+
+		$results = $sql->select("CALL sp_users_save(:idusuario, :des_usuario", array(
+			":idusuario"=>$this->getidusuario(),
+			":des_usuario"=>$this->getdes_usuario(),
+			":des_senha"=>$this->getdes_senha()
+		));
+
+
+	}
+	public function delete()
+	{
+		$sql = new Sql();
+
+		$sql->query("CALL sp_users_delete(:idusuario)", array(
+			":idusuario"=>$this->getidusuario()
+
+		));
+	}
+
+}

@@ -1,0 +1,40 @@
+
+      <!-- Inicio do formulario -->
+     
+      <div class="campo-cadastro">
+      <p id="titulo-cadastro-orgao">Novo Registro</p>
+      
+        <form action="#" method="post" class="formulario-cadastro">
+          <br><br>
+
+          <th id="th2">Data</th>
+          <input class="data-vencimento-input" type="date" name="data-registro">
+          <br><br>
+          <th id="th2">Hora</th>
+          <input class="data-vencimento-input" type="time" name="hora-registro">
+          <br><br>
+          <td id="th1">Observações</td>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <br><br>
+          <input class="botao-gravar-formulario" type="submit"></input>
+        </form>
+    
+      </div>
+
+      <!-- Fim do formulario -->
+  </section>
+  <!-- End Main -->
+  <script>
+  let arrow = document.querySelectorAll(".arrow");
+  for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e)=>{
+   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+   arrowParent.classList.toggle("showMenu");
+    });
+  }
+  let sidebar = document.querySelector(".sidebar");
+  let sidebarBtn = document.querySelector(".bx-menu");
+  console.log(sidebarBtn);
+  sidebarBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("close");
+  });

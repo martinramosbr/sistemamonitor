@@ -1,32 +1,76 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?>  <li>
-    <div class="profile-details">
-      <div class="profile-content">
-      </div>
-      <div class="name-job">
-        <div class="profile_name">$Usuario</div>
-        <div class="job">Carletto Sitemas</div>
-      </div>
-      <a class="bx bx-log-out" style="color: #fff; height: 50px; min-width: 78px; text-align: center; line-height: 50px; font-size: 20px; cursor: pointer; transition: all 0.3s ease;" href="sistema/logout">Sair</a>
-    </div>
-  </li>
-</ul>
-  </div>
-  <!--Start Main -->
-  <section class="home-section">
-    <div class="home-content">
-      <i class='bx bx-menu' ></i>
-      <span class="text">Sistema de Monitoramento <h1>  Contratos Carletto</h1></span>
-      <h3 id="ass"> _Por Martinho Ramos</h3>
-    </div>
-    <div class="dataehora">
-      <script language=javascript type="text/javascript">
-      now = new Date
-      document.write (now.getHours() + ":" + now.getUTCMinutes() + ", " + now.getDate() + "/" + now.getMonth() + "/" + now.getFullYear() )
-      </script>
-      </div>
-      <!-- Inicio do formulario -->
-     
+<?php if(!class_exists('Rain\Tpl')){exit;}?>
 
+      <!-- Inicio do formulario -->
+     <p id="titulo-cadastro-ticket" style="padding-left: 40%; padding-bottom: 10px; font-style: italic;">Enviar novo ticket</p>
+    <div class="campo-cadastro" style="width: 87%; top: -50px;">
+    <form action="/sistema" method="post" class="formulario-ticket">
+      <br>
+        <div class="form-group row">
+          <div class="row">
+            <div class="col">
+              <label for="form-control titulo" style="width:80px;">Nome</label>
+              <input type="text" class="form-control" placeholder="Seu nome" style="width:390px; margin-right: 0px; position: relative;" name="des_nome" required>
+              <br>
+              <label for="form-control titulo" style="width:80px;">E-mail</label>
+              <input type="text" class="form-control" placeholder="exemplo@email.com" style="width:390px; margin-right: 0px position: relative;" name="des_email" required>
+              <br>        
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="row">
+          <div class="col">
+            <label for="form-control titulo" style="width:173px;">Titulo da solicitação</label>
+            <input type="text"class="form-control" placeholder="Digite:" id="form-control titulo" style="width: 390px; margin-right: 0px" name="des_titulo" required>
+          </div>
+          </div>
+        </div>
+      <br>
+    <div class="form-group row">         
+    <label for="exampleFormControlSelect1" style="width:132px;">Departamento</label>
+    <select class="form-control" id="exampleFormControlSelect1" style="width: 15%" name="des_departamento" required>
+      <option>*Selecione*</option>
+      <option>Comercial</option>
+      <option>Financeiro Carletto</option>
+      <option>Oper. Carletto</option>
+      <option>Oper. Brasil Predial</option>  
+    </select>
+    <label for="exampleFormControlSelect1" style="width:57px;padding-left: 20px;">Tipo</label>
+    <select class="form-control" id="exampleFormControlSelect1" style="width: 22%" name="des_tipo" required> 
+      <option>*Selecione*</option>
+      <option>Suporte equipamentos</option>
+      <option>Suporte sistemas</option>
+      <option>Manutenção em equipamentos</option>
+      <option>Rede e Internet</option>
+      <option>Solicitação de suprimentos</option>  
+    </select>
+    <label for="exampleFormControlSelect1" style="width: 111px;padding-left: 27px;">Prioridade</label>
+    <select class="form-control" id="exampleFormControlSelect1" style="width: 10%" name="des_prioridade">
+      <option>*Selecione*</option>
+      <option>Normal</option>
+      <option>Emergencial</option>
+      <option>Urgente</option> 
+    </select>
+    </div>  
+    <br>
+
+      <div class="form-group row">
+      <br>
+        <label for="exampleFormControlTextarea1" style="width: 11px;">Mensagem</label>
+        <textarea style="padding: 20px;" class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Descreva sua solicitação..." name="des_mensagem" required></textarea>
+      </div>
+     
+   
+      <br><br>
+    <!--<div class="form-group">
+        &lt;?php if($msg != false) echo "<p> $msg </p>"; ?&gt;
+        <label for="exampleFormControlFile1">Anexo: </label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="des_arquivo">
+    </div>-->
+      
+      <input class="botao-gravar-formulario" type="submit">
+    </form>
+</div>
 
       <!-- Fim do formulario -->
   </section>
